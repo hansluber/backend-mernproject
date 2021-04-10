@@ -3,6 +3,11 @@ env.DOCKER_IMAGE_NAME = 'backend5'
 pipeline {
     agent any
     stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        } 
         stage('Git Pull from Github') {
             steps {
                 git branch: 'main', url: 'https://github.com/hansluber/backend-mernproject.git'
