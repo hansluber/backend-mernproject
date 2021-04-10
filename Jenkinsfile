@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Git Pull from Github') {
             steps {
-                git url: 'https://github.com/hansluber/backend-mernproject.git'
+                git branch: 'main', url: 'https://github.com/hansluber/backend-mernproject.git'
             }
         }    
         stage('Build Docker Image') {
